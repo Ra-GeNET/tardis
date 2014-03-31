@@ -32,7 +32,6 @@ function tardis-install-phpmyadmin -d "Installs phpmyadmin as a site"
     cp phpMyAdmin*/* public/. -R
 
     rweb
-
     crow success "PhpMyAdmin has been installed to /tardis/sites/phpmyadmin" as phpmyadmin.(hostname)
 
 end
