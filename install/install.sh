@@ -16,6 +16,9 @@ dpkg-reconfigure locales
 mkdir /root/.byobu
 echo "source /tardis/config/byobu" > /root/.byobu/.tmux.conf
 
+# Build esssentials
+apt-get -y install software-properties-common python-software-properties python g++ make htop build-essential
+
 #Add Repo's
 add-apt-repository -y ppa:keithw/mosh
 add-apt-repository -y ppa:fish-shell/release-2
@@ -23,11 +26,11 @@ add-apt-repository -y ppa:chris-lea/node.js
 apt-get update
 
 # Apt-get install
-apt-get -y install mosh byobu git toilet fail2ban python-software-properties python g++ make htop build-essential zip figlet toilet
+apt-get -y install mosh byobu git toilet fail2ban zip figlet toilet
 echo 'done with major toolset'
 apt-get -y install nodejs 
 apt-get update
-apt-get upgrade
+apt-get -y upgrade
 
 apt-get -y install fish npm
 
