@@ -26,6 +26,9 @@ apt-get update
 apt-get -y install mosh byobu git toilet fail2ban python-software-properties python g++ make htop build-essential zip figlet toilet
 echo 'done with major toolset'
 apt-get -y install nodejs 
+apt-get update
+apt-get upgrade
+
 apt-get -y install fish npm
 
 # Set default group
