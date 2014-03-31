@@ -1,6 +1,6 @@
 function eye-of-harmony -d "Install core system"
   crow notice 'Setting up and checking version'
-  tardis-upgrade
+  sudo tardis-upgrade
 
   crow notice 'Installing RVM'
   tardis-install-rvm
