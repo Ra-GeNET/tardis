@@ -1,6 +1,12 @@
-#!/bin/sh 
+#! /bin/sh
 
-# fix locale error messages with apt
+mkdir -p /tardis
+
+# Initial Upgrade to zero-day
+apt-get update
+apt-get -y upgrade
+
+# Fix locale error messages with apt
 echo "LANG=\"en_US.UTF-8\"" > /etc/default/locale
 echo "LANGUAGE=\"en_US.UTF-8\"" >> /etc/default/locale
 echo "LC_ALL=\"en_US.UTF-8\"" >> /etc/default/locale
@@ -8,46 +14,35 @@ echo "LC_BYOBU=1" >> /etc/default/locale  # make byoby system-wide default, if i
 locale-gen en_US en_US.UTF-8
 dpkg-reconfigure locales
 mkdir /root/.byobu
-echo "source /devstar/config/byobu" > /root/.byobu/.tmux.conf
+echo "source /tardis/config/byobu" > /root/.byobu/.tmux.conf
 
-# upgrade to zero-day
-apt-get update
-apt-get -y upgrade
-
-# add support for ppa
-apt-get install -y python-software-properties
-
-# repositories
-add-apt-repository -y ppa:keithw/mosh            # mosh
-apt-add-repository -y ppa:fish-shell/release-2   # fish
+#Add Repo's
+add-apt-repository -y ppa:keithw/mosh
+add-apt-repository -y ppa:chris-lea/node.js
 apt-get update
 
-# install it all at once
-apt-get -y install mosh byobu fish git toilet fail2ban
+# Apt-get install
+apt-get -y install mosh byobu git toilet fail2ban python-software-properties python g++ make
+apt-get -y install nodejs npm
 
-# set default group
-addgroup devstar
-usermod -g devstar root
-echo "%devstar   ALL=(ALL:ALL) NOPASSWD:ALL" > /etc/sudoers.d/devstar
-chmod 0440 /etc/sudoers.d/devstar
+# Set default group
+addgroup tardis
+usermod -g tardis root
+echo "%tardis   ALL=(ALL:ALL) NOPASSWD:ALL" > /etc/sudoers.d/tardis
+chmod 0440 /etc/sudoers.d/tardis
 
-# checkout devstar
-mkdir -p /devstar
-cd /devstar
-git clone https://github.com/RamonGebben/devstar.git .
-mkdir -p /devstar/sites
-mkdir -p /devstar/flags
+# Checkout Tardis
+cd /tardis
+git clone https://github.com/Ra-GeNET/tardis.git .
+mkdir -p /tardis/sites
+mkdir -p /tardis/flags
 
-# fix ownership
-chown -R root:devstar /devstar 
-chown -R root:devstar /devstar
+# Fix ownership
+chown -R root:tardis /tardis 
+chown -R root:tardis /tardis
 
-# link fish functions
-ln -s /devstar/fish /etc/fish/functions
-
-# fix default umask
+# Fix default umask
 sed -i 's/UMASK\s*022/UMASK 002/g' /etc/login.defs
 
-echo "***************************"
-echo "REBOOT and run ds-update"
-#reboot
+# Reboot
+reboot
