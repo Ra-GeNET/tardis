@@ -1,7 +1,7 @@
-function ds-fix-permissions -d "Fix devstar group permissions"
+function tardis-fix-permissions -d "Fix tardis group permissions"
 
-  sudo chgrp -R devstar /devstar
-  sudo chmod -R g+w /devstar
-  crow success "Make sure all files /devstar have group devstar and group-permission to write"
+  sudo chgrp -R tardis /tardis
+  sudo chmod -R g+w /tardis
+  crow success "Make sure all files /tardis have group tardis and group-permission to write"
 
 end
