@@ -62,9 +62,9 @@ function tardis-help -d "Show important keyboard shortcuts & wiki topics"
     echo -s "First-usage"
     echo 
     if test -e "/tardis/flags/first-upgrade" 
-      crow notice "Perform initial upgrade: ds-upgrade"
+      crow notice "Perform initial upgrade: tardis-upgrade"
     else
-      crow notice "Create a first user: ds-user <login>"
+      crow notice "Create a first user: tardis-user <login>"
     end    
     
   end
