@@ -1,4 +1,4 @@
-function ds-env -d "Display current environment"
+function tardis-env -d "Display current environment"
 
   echo
   set_color -b 222 d91161
