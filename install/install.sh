@@ -46,15 +46,16 @@ git clone https://github.com/Ra-GeNET/tardis.git .
 mkdir -p /tardis/sites
 mkdir -p /tardis/flags
 
-# Link fish functions
-ln -s /tardis/fish /etc/fish/functions
-
 # Fix ownership
 chown -R root:tardis /tardis 
 chown -R root:tardis /tardis
 
 # Fix default umask
 sed -i 's/UMASK\s*022/UMASK 002/g' /etc/login.defs
+
+# Link fish functions
+ln -s /tardis/fish /etc/fish/functions
+
 
 # Reboot
 reboot
