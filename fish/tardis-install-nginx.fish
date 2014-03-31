@@ -6,13 +6,13 @@ function tardis-install-nginx -d "Install nginx webserver from source"
   sudo apt-get -y install libcurl4-openssl-dev 
 
   crow notice "Turning swap on"
-  ds-swap on
+  tardis-swap on
   
   crow notice "Building en installing nginx" 
   sudo passenger-install-nginx-module --languages ruby,python,nodejs,meteor --auto-download --extra-configure-flags='"--with-http_ssl_module --with-http_mp4_module"' --auto --prefix=/opt/nginx
 
   crow notice "Turning swap off"
-  ds-swap off
+  tardis-swap off
 
   crow notice "Hooking up nginx as a system-wide service"
   sudo cp /tardis/config/nginx.service /etc/init.d/nginx
