@@ -1,6 +1,6 @@
-function new-site-rails-mysql -d "Creates a new rails in /devstar/sites with mysql as default database"
+function new-site-rails-mysql -d "Creates a new rails in /tardis/sites with mysql as default database"
 
- cd /devstar/sites
+ cd /tardis/sites
  mkdir $argv[1]
  cd $argv[1]
  rails new . -B
@@ -49,7 +49,7 @@ function new-site-rails-mysql -d "Creates a new rails in /devstar/sites with mys
  echo "server {" >> config/nginx.conf
  echo " listen 80;" >> config/nginx.conf
  echo -s " server_name " $argv[1] "." (hostname) ";" >> config/nginx.conf
- echo -s " root /devstar/sites/" $argv[1] "/public;" >> config/nginx.conf
+ echo -s " root /tardis/sites/" $argv[1] "/public;" >> config/nginx.conf
  echo " passenger_enabled on;" >> config/nginx.conf
  echo " rack_env development;" >> config/nginx.conf
  echo "}" >> config/nginx.conf
