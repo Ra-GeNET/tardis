@@ -7,7 +7,7 @@ function wiki -a topic -d "view selected wiki topics"
     set_color -b 222 d91161
     echo -s "Wiki documents"
 
-    for t in /devstar/wiki/*.md
+    for t in /tardis/wiki/*.md
       echo
       set_color -b normal yellow
       echo -n -s '  » '
@@ -22,8 +22,8 @@ function wiki -a topic -d "view selected wiki topics"
 
   case '*'
 
-    if test -e /devstar/wiki/$topic.md 
-      mad /devstar/wiki/$topic.md
+    if test -e /tardis/wiki/$topic.md 
+      mad /tardis/wiki/$topic.md
     else
       crow error "$topic does not exist"
       wiki
