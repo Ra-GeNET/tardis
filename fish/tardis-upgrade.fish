@@ -1,29 +1,26 @@
-function ds-upgrade -d "Brings core tools and configuration up to date" 
+function tardis-upgrade -d "Brings core and configuration up to date" 
 
-  mkdir -p /devstar/flags
-  touch /devstar/flags/first-upgrade
+  mkdir -p /tardis/flags
+  touch /tardis/flags/first-upgrade
 
   crow notice "Ensuring tools, logs & sites folder"
-  mkdir -p /devstar/tools
-  mkdir -p /devstar/logs
-  mkdir -p /devstar/sites
-  mkdir -p /devstar/source
-  mkdir -p /devstar/fishc
-  mkdir -p /devstar/skeletons
-  mkdir -p /devstar/archive
+  mkdir -p /tardis/tools
+  mkdir -p /tardis/logs
+  mkdir -p /tardis/sites
+  mkdir -p /tardis/source
+  mkdir -p /tardis/fishc
+  mkdir -p /tardis/skeletons
+  mkdir -p /tardis/archive
 
   crow notice "Pull most recent changes from remote git"
   git pull
 
-  crow notice "Install default toolset"
-  sudo apt-get -y install htop build-essential zip figlet toilet 
-
   crow notice "Update fish auto-completitions"
   fish_update_completions 
   
-  crow notice "Changing write permissions /devstar*"
-  sudo chmod -R g+w /devstar
+  crow notice "Changing write permissions /tardis*"
+  sudo chmod -R g+w /tardis
   
-  crow success "Finished ds-upgrade proccess"
+  crow success "Finished tardis-upgrade proccess"
 
 end
