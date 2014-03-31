@@ -39,6 +39,9 @@ git clone https://github.com/Ra-GeNET/tardis.git .
 mkdir -p /tardis/sites
 mkdir -p /tardis/flags
 
+# Link fish functions
+ln -s /devstar/fish /etc/fish/functions
+
 # Fix ownership
 chown -R root:tardis /tardis 
 chown -R root:tardis /tardis
