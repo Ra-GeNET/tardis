@@ -1,10 +1,9 @@
 function fish_greeting
   function g2 
     df -h -x tmpfs -x devtmpfs | sed "s/^/  /"
-    #cd /devstar/sites  
+    cd /tardis/sites  
     #du -sh * | sed "s/^/  /"
-    ds-help
-    ds-env
+    tardis-env
   end
   clear
   echo 
