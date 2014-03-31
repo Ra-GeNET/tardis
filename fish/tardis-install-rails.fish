@@ -1,3 +1,3 @@
-function ds-install-rails
+function tardis-install-rails
   sudo gem install rails
 end
