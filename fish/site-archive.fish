@@ -4,12 +4,12 @@ function site-archive -a name -d "Archive the website as a timestamped .tar.gz"
     case "" 
       crow notice "Usage: site-archive <name>"
     case "*"
-      if test -d /devstar/sites/$name 
+      if test -d /tardis/sites/$name 
         crow notice "Backing up website data"
-        cd /devstar/sites/$name
+        cd /tardis/sites/$name
         tgz
-        mv *.tar.gz /devstar/archive
-        cd /devstar/sites
+        mv *.tar.gz /tardis/archive
+        cd /tardis/sites
       else
         crow error "Name $name is not a site folder"
         crow notice "Usage: site-archive <name>"
