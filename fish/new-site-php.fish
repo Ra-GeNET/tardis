@@ -6,7 +6,7 @@ function new-site-php -a name -d "Makes new PHP site"
 
     skeletons default php 
     crow notice "Setting up initial nginx configuration"
-    cd /devstar/sites/$name
+    cd /tardis/sites/$name
 
     touch log/nginx.access.log
     touch log/nginx.error.log
@@ -15,9 +15,9 @@ function new-site-php -a name -d "Makes new PHP site"
     echo "server {" >> config/nginx.conf
     echo " listen 80;" >> config/nginx.conf
     echo -s " server_name " $name "." (hostname) ";" >> config/nginx.conf
-    echo -s " root /devstar/sites/" $name "/public;" >> config/nginx.conf
-    echo -s " access_log /devstar/sites/" $name "/log/nginx.access.log;" >> config/nginx.conf;
-    echo -s " error_log /devstar/sites/" $name "/log/nginx.error.log;" >> config/nginx.conf;
+    echo -s " root /tardis/sites/" $name "/public;" >> config/nginx.conf
+    echo -s " access_log /tardis/sites/" $name "/log/nginx.access.log;" >> config/nginx.conf;
+    echo -s " error_log /tardis/sites/" $name "/log/nginx.error.log;" >> config/nginx.conf;
     echo -s " error_page 404 /404.html"
     echo -s " error_page 500 501 502 503 504 /50x.html"
     echo " index index.php index.html index.htm;" >> config/nginx.conf
