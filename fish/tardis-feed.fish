@@ -1,4 +1,4 @@
-function ds-feed -a view -d "Display the comments throughout the tree"
+function tardis-feed -a view -d "Display the comments throughout the tree"
 
   function showb
     for i in ( cat -s $argv[1] )
@@ -8,7 +8,7 @@ function ds-feed -a view -d "Display the comments throughout the tree"
   
   function showc 
     set_color green  
-    crow notice $argv[1] | sed 's/\.[^.]*$//' | sed 's/\/devstar\///g' | sed 's/\/$//g' | sed '/^$/d'
+    crow notice $argv[1] | sed 's/\.[^.]*$//' | sed 's/\/tardis\///g' | sed 's/\/$//g' | sed '/^$/d'
     showb $argv[1]
   end
 
@@ -18,13 +18,13 @@ function ds-feed -a view -d "Display the comments throughout the tree"
         showc $c
       end    
     case updates
-      for c in (ls -1 -t /devstar/**/.comment)[1..3]
+      for c in (ls -1 -t /tardis/**/.comment)[1..3]
         showc $c
       end    
     case latest
-      showc (ls -1 -t /devstar/**/.comment)[1]
+      showc (ls -1 -t /tardis/**/.comment)[1]
     case 'all'
-      for c in (ls -1 /devstar/**/.comment)[1..3]
+      for c in (ls -1 /tardis/**/.comment)[1..3]
         showc $c
       end    
     case 'here'
@@ -32,7 +32,7 @@ function ds-feed -a view -d "Display the comments throughout the tree"
         showb (echo -s (pwd) "/.comment")
       end       
     case '*'
-      for c in (ls -1 -t /devstar/**/.comment)        
+      for c in (ls -1 -t /tardis/**/.comment)        
         showc $c
       end    
   end
