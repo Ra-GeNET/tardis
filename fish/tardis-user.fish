@@ -1,7 +1,7 @@
 function tardis-user -a name -d "Adds a user to this system"
   switch "$name"
     case ''
-      crow error "Usage: ds-user <username>"
+      crow error "Usage: tardis-user <username>"
     case '*'      
 
       crow notice "Adding user to system"
