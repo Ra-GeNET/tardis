@@ -18,7 +18,7 @@ echo "source /tardis/config/byobu" > /root/.byobu/.tmux.conf
 
 #Add Repo's
 add-apt-repository -y ppa:keithw/mosh
-sudo apt-add-repository -y ppa:fish-shell/release-2
+add-apt-repository -y ppa:fish-shell/release-2
 add-apt-repository -y ppa:chris-lea/node.js
 apt-get update
 
