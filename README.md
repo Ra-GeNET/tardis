@@ -19,15 +19,15 @@ Now we need to set up user account. You do this by trowing:
 
 `tardis-user`
 
-To fix up the rest of the programs en dependencies run: 
+Log in with your user account and run to fix up the rest of the programs en dependencies run: 
 
-`eye-of-harmony`
+`sudo eye-of-harmony`
 
 When The Eye of Harmony is done building the engine that makes it posible to travel in time and space, the server will reboot again.
 
 Now you are ready to go fight Cyberman.
 
-Happy Coding.
+> **Happy Coding.**
 
 
 
