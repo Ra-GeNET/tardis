@@ -22,7 +22,8 @@ add-apt-repository -y ppa:chris-lea/node.js
 apt-get update
 
 # Apt-get install
-apt-get -y install mosh byobu git toilet fail2ban python-software-properties python g++ make
+apt-get -y install mosh byobu git toilet fail2ban python-software-properties python g++ make htop build-essential zip figlet toilet
+echo 'done with major toolset'
 apt-get -y install nodejs npm
 
 # Set default group
