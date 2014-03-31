@@ -23,9 +23,10 @@ add-apt-repository -y ppa:chris-lea/node.js
 apt-get update
 
 # Apt-get install
-apt-get -y install mosh fish byobu git toilet fail2ban python-software-properties python g++ make htop build-essential zip figlet toilet
+apt-get -y install mosh byobu git toilet fail2ban python-software-properties python g++ make htop build-essential zip figlet toilet
 echo 'done with major toolset'
-apt-get -y install nodejs npm
+apt-get -y install nodejs 
+apt-get -y install fish npm
 
 # Set default group
 addgroup tardis
