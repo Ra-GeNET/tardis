@@ -1,4 +1,4 @@
-function ds-install-nginx -d "Install nginx webserver from source"
+function tardis-install-nginx -d "Install nginx webserver from source"
 
 
   crow notice "Installing passenger"
@@ -15,10 +15,10 @@ function ds-install-nginx -d "Install nginx webserver from source"
   ds-swap off
 
   crow notice "Hooking up nginx as a system-wide service"
-  sudo cp /devstar/config/nginx.service /etc/init.d/nginx
+  sudo cp /tardis/config/nginx.service /etc/init.d/nginx
 
   sudo rm -r /opt/nginx/conf
-  sudo ln -s /devstar/config/nginx /opt/nginx/conf
+  sudo ln -s /tardis/config/nginx /opt/nginx/conf
 
   crow notice "Installing rails"
   gem install rails
