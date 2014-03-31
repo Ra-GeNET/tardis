@@ -14,7 +14,22 @@ To install make a TARDIS of your server just run the install script as root on a
 
 At the end of the script your server will reboot, wait a few seconds and reconnect.
 
-To fix up the rest of the programs en dependencies run `tardis-upgrade`.
+Now you will jump into a Byobu session with fish shell.
+Now we need to set up user account. You do this by trowing: 
+
+`tardis-user`
+
+To fix up the rest of the programs en dependencies run: 
+
+`eye-of-harmony`
+
+When The Eye of Harmony is done building the engine that makes it posible to travel in time and space, the server will reboot again.
+
+Now you are ready to go fight Cyberman.
+
+Happy Coding.
+
+
 
 
 
