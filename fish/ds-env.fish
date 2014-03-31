@@ -10,5 +10,4 @@ function ds-env -d "Display current environment"
     crow notice (rvm use) | sed "s/^/  /"
     echo
   end
-
 end
