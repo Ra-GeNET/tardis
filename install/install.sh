@@ -26,13 +26,10 @@ add-apt-repository -y ppa:chris-lea/node.js
 apt-get update
 
 # Apt-get install
-apt-get -y install mosh byobu git toilet fail2ban zip figlet toilet
+apt-get -y install fish mosh byobu git toilet fail2ban zip figlet toilet
 echo 'done with major toolset'
 apt-get -y install nodejs 
-apt-get update
-apt-get -y upgrade
-
-apt-get -y install fish npm
+apt-get -y install npm
 
 # Set default group
 addgroup tardis
