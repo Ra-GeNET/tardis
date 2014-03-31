@@ -1,4 +1,4 @@
-function ds-help -d "Show important keyboard shortcuts & wiki topics"
+function tardis-help -d "Show important keyboard shortcuts & wiki topics"
 
   function showkey 
     set_color  444
@@ -56,12 +56,12 @@ function ds-help -d "Show important keyboard shortcuts & wiki topics"
 
   wiki
 
-  if test -e "/devstar/flags/first-user" 
+  if test -e "/tardis/flags/first-user" 
   else
     set_color -b 222 d91161
     echo -s "First-usage"
     echo 
-    if test -e "/devstar/flags/first-upgrade" 
+    if test -e "/tardis/flags/first-upgrade" 
       crow notice "Perform initial upgrade: ds-upgrade"
     else
       crow notice "Create a first user: ds-user <login>"
