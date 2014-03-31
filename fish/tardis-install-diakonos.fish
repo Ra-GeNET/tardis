@@ -1,8 +1,8 @@
-function ds-install-diakonos -d "Install the diakonos text editor"
+function tardis-install-diakonos -d "Install the diakonos text editor"
   crow notice "Installing depencency 'curses' as gem"
   gem install curses
-  mkdir -p /devstar/source/diakonos  
-  cd /devstar/source/diakonos
+  mkdir -p /tardis/source/diakonos  
+  cd /tardis/source/diakonos
   if test -d .git
     crow notice "Pulling from remote git repository"
     git pull
