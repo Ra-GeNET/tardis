@@ -1,6 +1,6 @@
 function ds-install-editor -d "Install tardis Editor"
     cd /tardis/sites/
-    git clone ssh://devstar.ra-ge.net/tardis/sites/editor
+    git clone https://github.com/Ra-GeNET/editor.git
     chmod -R g+w editor
     cd /tardis/sites/editor/
     bundle install
