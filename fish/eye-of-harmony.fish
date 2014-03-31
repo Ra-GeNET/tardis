@@ -1,4 +1,7 @@
 function eye-of-harmony -d "Install core system"
+  crow notice 'Setting up and checking version'
+  tardis-upgrade
+
   crow notice 'Installing RVM'
   tardis-install-rvm
   
@@ -26,7 +29,7 @@ function eye-of-harmony -d "Install core system"
   crow notice 'Installing Node packages'
   tardis-install-npms
   
-  crow notice 'Done building The Eye of Harmony'
+  crow success 'Done building The Eye of Harmony'
   
 end
   
