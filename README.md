@@ -2,7 +2,7 @@
 #TARDIS Server IDE
 
 ## What is TARDIS?
-TARDIS is an highly opinionated server configuration for all round web development which started as [Devstar IDE](https://github.com/RamonGebben/devstar). It lays focus on usability, shell scripting, workflow optimisation and collabrative coding.
+TARDIS is an highly opinionated server configuration for all round web development which started as [Devstar IDE](https://github.com/RamonGebben/devstar) by [RamonGebben](https://github.com/RamonGebben) and [RalfN](https://github.com/RalfN). It lays focus on usability, shell scripting, workflow optimisation and collabrative coding.
 
 > *Battle tested on Ubuntu 12.04.3 x64*
 
