@@ -26,13 +26,10 @@ add-apt-repository -y ppa:chris-lea/node.js
 apt-get update
 
 # Apt-get install
-apt-get -y install mosh byobu git toilet fail2ban zip figlet toilet
+apt-get -y install fish mosh byobu git toilet fail2ban zip figlet toilet
 echo 'done with major toolset'
 apt-get -y install nodejs 
-apt-get update
-apt-get -y upgrade
-
-apt-get -y install fish npm
+apt-get -y install npm
 
 # Set default group
 addgroup tardis
@@ -46,15 +43,16 @@ git clone https://github.com/Ra-GeNET/tardis.git .
 mkdir -p /tardis/sites
 mkdir -p /tardis/flags
 
-# Link fish functions
-ln -s /tardis/fish /etc/fish/functions
-
 # Fix ownership
 chown -R root:tardis /tardis 
 chown -R root:tardis /tardis
 
 # Fix default umask
 sed -i 's/UMASK\s*022/UMASK 002/g' /etc/login.defs
+
+# Link fish functions
+ln -s /tardis/fish /etc/fish/functions
+
 
 # Reboot
 reboot
