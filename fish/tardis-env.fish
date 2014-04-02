@@ -5,10 +5,6 @@ function tardis-env -d "Display current environment"
   echo -s "Environment"
   set_color -b normal
   echo
-
-  if test -d /usr/local/rvm 
-    crow notice (rvm use) | sed "s/^/  /"
-    echo
-  end
+  rvm use 2.1.0
 
 end
